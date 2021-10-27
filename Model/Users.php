@@ -38,8 +38,7 @@ class Users {
 
 	public function getPassword() {
 		$pass = $_POST['password'];    
-		$passHash = password_hash($pass, PASSWORD_BCRYPT);
-		return $passHash;
+		return $pass;
 	}
 
 	public function setPassword($password) {

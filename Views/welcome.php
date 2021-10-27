@@ -3,7 +3,7 @@
       session_start(); 
   } 
   if($_SESSION["realname"] ?? null) {
-    require_once('../RecursosInformaticos/Views/Layouts/cabecera.php');
+    require_once('../RecursosInformaticos/Views/Layouts/header.php');
 ?>
 
 <div class="card text-center">
@@ -55,5 +55,5 @@
 </div>
 
 <?php
-  } else require_once('Views/Errores/accesoDenegado.php');
+  } else require_once('Views/Errors/accesoDenegado.php');
 ?>

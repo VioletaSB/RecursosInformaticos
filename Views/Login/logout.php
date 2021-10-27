@@ -2,7 +2,7 @@
     if(!isset($_SESSION)){ 
         session_start(); 
     } 
-    unset($_SESSION["id_usuario"]);
-    unset($_SESSION["nombre"]);
+    unset($_SESSION["id"]);
+    unset($_SESSION["realname"]);
     require_once('Views/Login/login.php');
 ?>

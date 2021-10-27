@@ -12,11 +12,11 @@
             $_SESSION["id"] = $row['id'];
             $_SESSION["realname"] = $row['realname'];
         } else {
-            require_once('Views/Errores/errorLogin.php');
+            require_once('Views/Errors/loginError.php');
         }
     }
     if(isset($_SESSION["id"])) {
-        require_once('Views/bienvenido.php');
+        require_once('Views/welcome.php');
     }else{
 ?>
 

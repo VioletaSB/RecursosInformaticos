@@ -4,7 +4,7 @@
 	<title>Gestión de Recursos Informáticos</title>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" type="text/css" href="../RecursosInformaticos/style.scss">
+	<link rel="stylesheet" type="text/css" href="../RecursosInformaticos/assets/scss/style.scss">
 	<link rel="icon" href="../RecursosInformaticos/images/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
 				session_start(); 
 			} 
 			if($_SESSION["realname"] ?? null) {
-				require_once('cabecera.php');
+				require_once('header.php');
 			} else echo "";
 		?>		
 	</header>

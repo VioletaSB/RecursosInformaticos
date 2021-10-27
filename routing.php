@@ -13,10 +13,10 @@ if (array_key_exists($controller, $controllers)) {
 		call($controller, $action);
 	}
 	else{
-		call('index','errorRuta');
+		call('index','routeError');
 	}		
 }else{
-	call('index','errorLogin');
+	call('index','loginError');
 }
 
 function call($controller, $action){

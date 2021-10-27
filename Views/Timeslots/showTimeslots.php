@@ -48,5 +48,5 @@
 </div>
 
 <?php
-  }else require_once('Views/Errores/accesoDenegado.php');
+  }else require_once('Views/Errors/accessDenied.php');
 ?>
