@@ -39,10 +39,10 @@ class TimeslotsController
 
 	//Función que permite actualizar los valores del tramo horario
 	function update(){
-		$time = new Time(null, $_POST['dayOfWeek'],$_POST['startTime'],$_POST['endTime']);
+		$time = new Time($_POST['id'], $_POST['dayOfWeek'],$_POST['startTime'],$_POST['endTime']);
 
 		Time::update($time);
-		$this->showTime();
+		$this->showTimeslots();
 	}
 
 	//Función que borra un tramo horario

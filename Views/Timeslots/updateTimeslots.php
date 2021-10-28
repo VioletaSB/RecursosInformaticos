@@ -29,7 +29,7 @@
 
 				<td class="form-group">
 					<label for="text">Start Time</label>
-					<input type="time" name="starTime" id="startTime" class="form-control" 
+					<input type="time" name="startTime" id="startTime" class="form-control" 
 						value="<?php echo $time->getStartTime(); ?>">
 				</td>
 
