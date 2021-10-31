@@ -79,7 +79,8 @@ class Resources
 	/* Hace una consulta devolviendo los datos de resources
 	 * y ordenándolos por su id
 	 */
-	public static function all(){
+	public static function all()
+	{
 		$db=Db::getConnect();
 		$listaResources=[];
 
@@ -148,7 +149,7 @@ class Resources
 	//Borra a un resources por su id
 	public static function delete($id){
 		$db=Db::getConnect();
-		$delete=$db->prepare('DELETE  FROM resources WHERE id=:id');
+		$delete=$db->prepare('DELETE  FROM reservations WHERE id=:id');
 		$delete->bindValue('id',$id);
 		$delete->execute();		
 	}

@@ -29,8 +29,9 @@
 					<th>Nombre</th>
 					<th>Descripción</th>
 					<th>Localización</th>
-					<th>Imagen</th>				
-					<th>Eliminar</th>
+					<th>Imagen</th>	
+					<th>Reservar</th>			
+					<th>Eliminar</th>					
 				</tr>
 			</thead>
 			<tbody style="cursor: pointer;">
@@ -44,9 +45,15 @@
 						<td><?php echo $resources->getDescription(); ?></td>
 						<td><?php echo $resources->getLocation(); ?></td>
 						<td><?php echo $resources->getImage(); ?></td>
+						<!-- cuidao aquí con el id -->
+						<td><span class='material-icons md-18'>
+						<a href="?controller=&&action=&&id=<?php 
+						echo $resources->getId() ?>" style="color:#195176;">edit_calendar</a></span></td>
+
 						<td><span class='material-icons md-18'>
 						<a href="?controller=resources&&action=delete&&id=<?php 
 						echo $resources->getId() ?>" style="color:#195176;">delete</a></span></td>
+						
 					</tr>
 					<?php } ?>
 			</tbody>			

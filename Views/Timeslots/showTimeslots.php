@@ -29,7 +29,7 @@
 			</thead>
 			<tbody style="cursor: pointer;">
 			<!-- Muestra los datos de la tabla tienda -->
-					<?php foreach ($listaTime as$time) {?>
+					<?php foreach ($listaTime as $time) {?>
 					
 					<tr onclick="document.location='?controller=timeslots&&action=updateTimeslots&&id=<?php  
 						echo $time->getId()?>'">
