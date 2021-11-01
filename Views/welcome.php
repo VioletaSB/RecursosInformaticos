@@ -16,7 +16,7 @@
     <div class="card-body">
       <h5 class="card-title" style="color:#195176;"><span class="material-icons align-middle">view_in_ar</span>Lista de Recursos</h5>
       <p class="card-text text-justify">Aquí podrá consultar todos los recursos informáticos disponibles para reservar.</p>
-      <a href="?controller=empleado&action=register"
+      <a href="?controller=resources&action=register"
         class="btn btn-outline-primary btn-lg"
         role="button" aria-disabled="true"><span class='material-icons md-18'>
         add_circle_outline</span>

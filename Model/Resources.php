@@ -54,6 +54,20 @@ class Resources
 	}
 
 	public function getImage(){
+			$dir_subida = '../RecursosInformaticos/images/';
+            $imagenRuta = $dir_subida . basename($_FILES['image']['name']);
+            $image = $_FILES['image']['name'];
+
+            //COMPROBACIÓN ELIMINAR
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $imagenRuta)) {
+                echo "El fichero es válido y se subió con éxito.\n";
+            } else {
+                echo "¡Posible ataque de subida de ficheros!\n";
+            }
+		return $image;
+	}
+
+	public function obtenerImagen() {
 		return $this->image;
 	}
 
@@ -141,7 +155,7 @@ class Resources
 		$update->bindValue('name', $resources->getName());
 		$update->bindValue('description',$resources->getDescription());
 		$update->bindValue('location',$resources->getLocation());
-		$update->bindValue('image',$resources->getImage());
+		$update->bindValue('image',$resources->obtenerImagen());
 		$update->bindValue('id',$resources->getId());
 		$update->execute();
 	}
@@ -149,7 +163,7 @@ class Resources
 	//Borra a un resources por su id
 	public static function delete($id){
 		$db=Db::getConnect();
-		$delete=$db->prepare('DELETE  FROM reservations WHERE id=:id');
+		$delete=$db->prepare('DELETE  FROM resources WHERE id=:id');
 		$delete->bindValue('id',$id);
 		$delete->execute();		
 	}

@@ -30,7 +30,7 @@
 					
 					<tr>
 						<td><?php echo $reservations->getName(); ?></a> </td>
-						<td><?php echo $reservations->getImage(); ?></td>
+						<?php echo "<td><img height='50px' name='image' src='../RecursosInformaticos/images/". $reservations->getImage() ."'></td>"; ?>
 						<td><?php echo $reservations->getRealname(); ?></td>
 						<td><?php echo $reservations->getDayOfWeek(); ?></td>
 						<td><?php echo $reservations->getStartTime(); ?></td>

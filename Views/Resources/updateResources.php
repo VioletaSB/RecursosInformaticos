@@ -38,9 +38,10 @@
 						value="<?php echo $resources->getLocation(); ?>">
 				</td>
 				<td class="form-group">
-					<label for="text">Imagen</label>
-					<input type="text" name="image" id="image" class="form-control" 
-						value="<?php echo $resources->getImage(); ?>">
+					<label for="text">Imagen:</label></br>
+					
+        			<input type='hidden' name='MAX_FILE_SIZE' value='3000000' />
+        			<input name='image' type='file' /></br>
 				</td>
 			</tr>
 			<tr>

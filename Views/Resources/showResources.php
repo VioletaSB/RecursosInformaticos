@@ -36,7 +36,7 @@
 			</thead>
 			<tbody style="cursor: pointer;">
 			<!-- Muestra los datos de la tabla de resources -->
-					<?php foreach ($listaResources as$resources) {?>
+					<?php foreach ($listaResources as $resources) {?>
 					
 					<tr onclick="document.location='?controller=resources&&action=updateResources&&idResources=<?php  
 						echo $resources->getId()?>'">
@@ -44,10 +44,10 @@
 						<td><?php echo $resources->getName(); ?></td>
 						<td><?php echo $resources->getDescription(); ?></td>
 						<td><?php echo $resources->getLocation(); ?></td>
-						<td><?php echo $resources->getImage(); ?></td>
+						<?php echo "<td><img height='50px' name='image' src='../RecursosInformaticos/images/". $resources->obtenerImagen() ."'></td>"; ?>
 						<!-- cuidao aquí con el id -->
 						<td><span class='material-icons md-18'>
-						<a href="?controller=&&action=&&id=<?php 
+						<a href="?controller=reservations&&action=register&&id=<?php 
 						echo $resources->getId() ?>" style="color:#195176;">edit_calendar</a></span></td>
 
 						<td><span class='material-icons md-18'>
