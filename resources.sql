@@ -67,8 +67,8 @@ INSERT INTO timeSlots VALUES (1,'2021/10/29','14:00','15:00'),
 -- Introducimos valores a la tabla resources
 -- 
 
-INSERT INTO resources VALUES (1,'Ordenador HP','Ordenador portatil','Aula 3',''),
-                             (2, 'Fotocopiadora Canon','Fotocopiadora','Secretaria','');
+INSERT INTO resources VALUES (1,'Ordenador HP','Ordenador portatil','Aula 3','hp.jpg'),
+                             (2, 'Fotocopiadora Canon','Fotocopiadora','Secretaria','canon.jpg');
 
 --
 -- Introducimos valores a la tabla reservations
