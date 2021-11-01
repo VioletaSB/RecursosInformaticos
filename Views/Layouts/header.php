@@ -15,7 +15,7 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link-primary p-2 ml-2" href="?controller=reservations&&action=showReservations" style="color:#195176;">
+          <a class="nav-link-primary p-2 ml-2" href="?controller=showreservations&&action=showReservations" style="color:#195176;">
             <span class="material-icons md-18 align-middle">event</span>Reservas</a>
         </li>
       </ul>

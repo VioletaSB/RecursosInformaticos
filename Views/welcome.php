@@ -22,7 +22,7 @@
         add_circle_outline</span>
 		  </a>
       <a href="?controller=resources&action=showResources" class="btn btn-outline-primary p-2">
-      <span class="material-icons align-middle">event</span>Reservar recursos</a>
+      <span class="material-icons align-middle">view_in_ar</span>Recursos</a>
     </div>
   </div>
 
@@ -30,7 +30,12 @@
     <div class="card-body">
       <h5 class="card-title" style="color:#195176;"><span class="material-icons align-middle">date_range</span>Reservas</h5>
       <p class="card-text text-justify">Aquí podrá consultar todos los recursos reservados hasta el momento.</p>
-      <a href="?controller=reservations&action=showReservations" class="btn btn-outline-primary p-2">
+      <a href="?controller=reservations&action=register"
+        class="btn btn-outline-primary btn-lg"
+        role="button" aria-disabled="true"><span class='material-icons md-18'>
+        edit_calendar</span>
+		  </a>
+      <a href="?controller=showreservations&action=showReservations" class="btn btn-outline-primary p-2">
       <span class="material-icons align-middle">date_range</span>Reservas activas</a>
     </div>
   </div>

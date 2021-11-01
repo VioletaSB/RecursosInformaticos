@@ -6,7 +6,8 @@ $controllers=array(
 	'resources'=>['register','save','showResources','updateResources','update','delete','search'],
 	'timeslots'=>['register','save','showTimeslots','updateTimeslots','update','delete','search'],
 	'users'=>['register','save','showUsers','updateUsers','update','delete','search'],
-	'reservations'=>['register','save','showReservations','delete']
+	'reservations'=>['register','save','delete'],
+	'showreservations'=>['showReservations']
 );
 
 if (array_key_exists($controller, $controllers)) {
@@ -43,7 +44,11 @@ function call($controller, $action){
 		case 'reservations':
 			require_once('Model/Reservation.php');
 			$controller= new ReservationsController();
-			break;	
+			break;
+		case 'showreservations':
+			require_once('Model/ShowReservation.php');
+			$controller= new ShowReservationsController();
+			break;		
 	}
 	$controller->{$action}();
 }

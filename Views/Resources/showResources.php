@@ -29,8 +29,7 @@
 					<th>Nombre</th>
 					<th>Descripción</th>
 					<th>Localización</th>
-					<th>Imagen</th>	
-					<th>Reservar</th>			
+					<th>Imagen</th>			
 					<th>Eliminar</th>					
 				</tr>
 			</thead>
@@ -45,10 +44,6 @@
 						<td><?php echo $resources->getDescription(); ?></td>
 						<td><?php echo $resources->getLocation(); ?></td>
 						<?php echo "<td><img height='50px' name='image' src='../RecursosInformaticos/images/". $resources->obtenerImagen() ."'></td>"; ?>
-						<!-- cuidao aquí con el id -->
-						<td><span class='material-icons md-18'>
-						<a href="?controller=reservations&&action=register&&id=<?php 
-						echo $resources->getId() ?>" style="color:#195176;">edit_calendar</a></span></td>
 
 						<td><span class='material-icons md-18'>
 						<a href="?controller=resources&&action=delete&&id=<?php 

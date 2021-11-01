@@ -13,7 +13,7 @@
 </nav>
 
 <div class="card container mt-2">
-	<h2 class="align-self-center p-2">Actualizar Recurso<?php echo $resources->getName() ?></h2>
+	<h2 class="align-self-center p-2">Actualizar Recurso <?php echo $resources->getName() ?></h2>
 	<!-- Muestra el formulario con los datos a actualizar -->
 	<form action="?controller=resources&&action=update" method="POST">
 		<table class="table">

@@ -7,6 +7,11 @@
 <div>	
 	<!-- Botón de búsqueda -->
 	<nav class="navbar navbar-light bg-light w-100">
+		<a href="?controller=reservations&action=register"
+			class="btn btn-outline-primary btn-lg"
+			role="button" aria-disabled="true"><span class='material-icons md-18 p-1'>
+			edit_calendar</span>
+		</a>
 		<h4>Lista de Reservas</h4>	
 	</nav>
 	<br/>
