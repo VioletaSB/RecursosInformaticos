@@ -1,4 +1,4 @@
-# Recursos Informáticos
+#Reserva de Recursos Informáticos
 Proyecto CRUD para la gestión de recursos informáticos
 desarrollado íntegramente con Bootstrap y php. 
 
