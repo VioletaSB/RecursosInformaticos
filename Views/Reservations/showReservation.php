@@ -25,14 +25,12 @@
 					<th>Usuario</th>
 					<th>Día de la Semana</th>	
 					<th>Hora de Inicio</th>	
-					<th>Hora de Fin</th>			
-					<th>Eliminar</th>					
+					<th>Hora de Fin</th>							
 				</tr>
 			</thead>
 			<tbody>
 			<!-- Muestra los datos de la tabla de resources -->
 					<?php foreach ($listaReservations as $reservations) {?>
-					
 					<tr>
 						<td><?php echo $reservations->getName(); ?></a> </td>
 						<?php echo "<td><img height='50px' name='image' src='../RecursosInformaticos/images/". $reservations->getImage() ."'></td>"; ?>
@@ -40,10 +38,6 @@
 						<td><?php echo $reservations->getDayOfWeek(); ?></td>
 						<td><?php echo $reservations->getStartTime(); ?></td>
 						<td><?php echo $reservations->getEndTime(); ?></td>
-						<!-- REVISAR -->
-						<td><span class='material-icons md-18'>
-						<a href="?controller=reservations&&action=delete ?>" style="color:#195176;">delete</a></span></td>
-						
 					</tr>
 					<?php } ?>
 			</tbody>			

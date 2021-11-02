@@ -19,8 +19,7 @@ class ResourcesController
 	//Función que registra el nuevo resources
 	function save()
 	{
-		$resources= new Resources(null, $_POST['name'],$_POST['description'],$_POST['location'],
-		$_POST['image']);
+		$resources= new Resources(null, $_REQUEST['name'],$_REQUEST['description'],$_REQUEST['location'], $_REQUEST['image']);
 
 		Resources::save($resources);
 		$this->showResources();
@@ -37,7 +36,7 @@ class ResourcesController
 	//Obtiene el id del resources y después redirige a la página de actualizar el resources
 	function updateResources()
 	{
-		$id=$_GET['idResources'];
+		$id=$_REQUEST['idResources'];
 		$resources=Resources::searchById($id);
 		require_once('Views/Resources/updateResources.php');
 	}
@@ -45,8 +44,8 @@ class ResourcesController
 	//Función que permite actualizar los valores del resources
 	function update()
 	{
-		$resources = new Resources($_POST['id'],$_POST['name'],$_POST['description'],
-			$_POST['location'],$_POST['image']);
+		$resources = new Resources($_REQUEST['id'],$_REQUEST['name'],$_REQUEST['description'],
+			$_REQUEST['location'],$_REQUEST['image']);
 		Resources::update($resources);
 		$this->showResources();
 	}
@@ -54,7 +53,7 @@ class ResourcesController
 	//Función que borra un resources
 	function delete()
 	{
-		$id=$_GET['id'];
+		$id=$_REQUEST['id'];
 		Resources::delete($id);
 		$this->showResources();
 	}
@@ -62,9 +61,9 @@ class ResourcesController
 	//Función que permite buscar por el nombre
 	function search()
 	{
-		if (!empty($_POST['name'])) 
+		if (!empty($_REQUEST['name'])) 
 		{
-			$name=$_POST['name'];
+			$name=$_REQUEST['name'];
 			$resources=Resources::searchByName($name);
 			$listaResources[]=$resources;
 			

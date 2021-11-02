@@ -1,6 +1,6 @@
 <?php 
 /**
-* Vista modelo reservations REVISAR
+* Vista modelo reservations
 */
 class Reservations
 {
@@ -59,42 +59,6 @@ class Reservations
 		$insert->bindValue('idUser',$reservations->getIdUser());
 		$insert->bindValue('idTimeSlot',$reservations->getIdTimeSlot());	
 		$insert->execute();
-
-	}
-
-	//Hace búsquedas por el id
-	public static function searchById($id)
-	{
-		$db=Db::getConnect();
-		$select=$db->prepare('SELECT resources.name, users.realname, timeslots.dayOfWeek, timeslots.startTime, timeslots.endTime 
-                              FROM reservations
-                              INNER JOIN timeslots ON reservations.idTimeSlot = timeslots.id
-                              INNER JOIN users ON reservations.idUser = users.id
-                              INNER JOIN resources ON reservations.idResource = resources.id
-							  WHERE idTimeslots=:idTimeslots;');
-		$select->bindValue('id',$id);
-		$select->execute();
-
-		$reservationsDb=$select->fetch();
-
-
-		$reservations=new Reservations($reservations['name'],$reservations['image'],$reservations['realname'],
-				$reservations['dayofweek'],$reservations['starttime'],$reservations['endtime']);
-							  
-		return $reservations;
-
-	}
-
-	//Borra a un reservations por su id
-	public static function delete($id)
-	{
-		$db=Db::getConnect();
-		$delete=$db->prepare('DELETE  FROM reservations WHERE idResource=:idResource');
-        $delete=$db->prepare('DELETE  FROM reservations WHERE idUser=:idUser');
-        $delete=$db->prepare('DELETE  FROM reservations WHERE idTimeSlot=:idTimeSlot');
-		$delete->bindValue('id',$id);
-		$delete->execute();		
 	}
 }
-
 ?>

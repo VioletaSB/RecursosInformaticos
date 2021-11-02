@@ -64,7 +64,7 @@
           $dia = $query->fetchAll();
 
           foreach ($dia as $valores):
-            echo '<option value="'.$valores["id"].'">'.$valores["dayOfWeek"].' || '.$valores["startTime"].' || '.$valores["startTime"].'</option>';
+            echo '<option value="'.$valores["id"].'">'.$valores["dayOfWeek"].' || '.$valores["startTime"].' || '.$valores["endTime"].'</option>';
           endforeach;
         ?>
         </select>

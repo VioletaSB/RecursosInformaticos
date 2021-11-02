@@ -35,7 +35,7 @@
 
 				<td class="form-group">
 					<label for="text">Tipo</label>
-					<input type="text" name="type" id="type" class="form-control" 
+					<input type="number" name="type" id="type" class="form-control" 
 						value="<?php echo $users->getType(); ?>">
 				</td>
 			</tr>

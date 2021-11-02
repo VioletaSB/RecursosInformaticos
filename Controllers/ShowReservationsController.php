@@ -1,6 +1,6 @@
 <?php 
 /**
-* Vista controlador Reservations REVISAR
+* Vista controlador Reservations
 */
 class ShowReservationsController
 {
@@ -23,26 +23,5 @@ class ShowReservationsController
 
 		require_once('Views/Reservations/showReservation.php');
 	}
-
-
-	//Función que permite buscar por el nombre
-	function search()
-	{
-		if (!empty($_POST['name'])) 
-		{
-			$name=$_POST['name'];
-			$reservations=ShowReservations::searchByName($name);
-			$listaReservations[]=$reservations;
-			
-			require_once('Views/Reservations/showReservation.php');
-		} 
-		else 
-		{
-			$listaReservations=ShowReservations::all();
-			
-			require_once('Views/Reservations/showReservation.php');
-		}		
-	}
 }
-
 ?>

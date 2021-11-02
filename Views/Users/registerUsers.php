@@ -39,7 +39,7 @@
       </td>
       <td class="form-group">
         <label for="text">Tipo de rol:</label>
-        <input type="text" name="type" class="form-control" placeholder="Ingrese el tipo de rol">
+        <input type="number" name="type" class="form-control" placeholder="Ingrese el tipo de rol">
       </td>
     </tr>  
     <tr> 

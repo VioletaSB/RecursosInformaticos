@@ -43,7 +43,8 @@
 						<td><?php echo $resources->getName(); ?></td>
 						<td><?php echo $resources->getDescription(); ?></td>
 						<td><?php echo $resources->getLocation(); ?></td>
-						<?php echo "<td><img height='50px' name='image' src='../RecursosInformaticos/images/". $resources->obtenerImagen() ."'></td>"; ?>
+						<?php echo "<td><img height='50px' name='image' 
+							src='../RecursosInformaticos/images/". $resources->obtenerImagen() ."'></td>"; ?>
 
 						<td><span class='material-icons md-18'>
 						<a href="?controller=resources&&action=delete&&id=<?php 

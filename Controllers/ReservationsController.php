@@ -1,6 +1,6 @@
 <?php 
 /**
-* Vista controlador Reservations REVISAR
+* Vista controlador Reservations
 */
 class ReservationsController
 {
@@ -19,46 +19,18 @@ class ReservationsController
 	//Función que registra el nuevo reservations
 	function save()
 	{
-		$reservations= new Reservations($_POST['idResource'],$_POST['idUser'],$_POST['idTimeSlot']);
+		$reservations = new Reservations($_REQUEST['idResource'],$_REQUEST['idUser'],$_REQUEST['idTimeSlot']);
 
 		Reservations::save($reservations);
-		require_once('Views/Errors/reservationOk.php');
+		require_once('Views/Errors/reservationSuccess.php');
 	}
 
 	//Función que muestra el código
 	function showReservations()
 	{
-		$listaReservations=ShowReservations::all();
+		$listaReservations = ShowReservations::all();
 
 		require_once('Views/Reservations/showReservation.php');
 	}
-
-	//Función que borra un reservations
-	function delete()
-	{
-		$id=$_GET['id'];
-		Reservations::delete($id);
-		$this->showReservations();
-	}
-
-	//Función que permite buscar por el nombre
-	function search()
-	{
-		if (!empty($_POST['name'])) 
-		{
-			$name=$_POST['name'];
-			$reservations=Reservations::searchByName($name);
-			$listaReservations[]=$reservations;
-			
-			require_once('Views/Reservations/showReservation.php');
-		} 
-		else 
-		{
-			$listaReservations=Reservations::all();
-			
-			require_once('Views/Reservations/showReservation.php');
-		}		
-	}
 }
-
 ?>

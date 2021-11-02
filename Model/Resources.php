@@ -60,7 +60,7 @@ class Resources
 
             //COMPROBACIÓN ELIMINAR
             if (move_uploaded_file($_FILES['image']['tmp_name'], $imagenRuta)) {
-                echo "El fichero es válido y se subió con éxito.\n";
+				require_once('Views/Errors/uploadSuccess.php');
             } else {
                 echo "¡Posible ataque de subida de ficheros!\n";
             }
